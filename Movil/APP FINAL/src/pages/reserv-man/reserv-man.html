@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar color="azul">
+      <ion-title>
+        Reserva Manual
+      </ion-title>
+      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list padding no-lines>
+      <ion-item padding>
+        <ion-label color="azul">Selecciona tipo de salón</ion-label>
+        <ion-select [(ngModel)]="pTipo" interface="popover">
+          <ion-option value="Aula">Aula</ion-option>
+          <ion-option value="Cubiculo">Cubículo</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item padding>
+        <ion-label color="azul">Que tenga:</ion-label>
+        <ion-select [(ngModel)]="pAulDe" interface="popover">
+          <ion-option value="pCola">1 Piano de cola</ion-option>
+          <ion-option value="pCyV">Piano de cola y P.vertical</ion-option>
+          <ion-option value="1clav">1 Clavinova</ion-option>
+          <ion-option value="2clav">2 Clavinovas</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item padding>
+        <ion-label color="azul">¿Necesitas piano?</ion-label>
+        <ion-select [(ngModel)]="pPiano" interface="popover">
+          <ion-option value="siPiano">SI</ion-option>
+          <ion-option value="noPiano">NO</ion-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item padding>
+        <ion-label color="azul">¿Para cúando?</ion-label>
+        <ion-select [(ngModel)]="pDia">
+          <ion-option value="Hoy en la mañana">Hoy en la mañana</ion-option>
+          <ion-option value="Hoy en la tarde">Hoy en la tarde</ion-option>
+          <ion-option value="Mañana en la mañana">Mañana en la mañana</ion-option>
+          <ion-option value="Mañana en la tarde">Mañana en la tarde</ion-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item padding>
+        <ion-label color="azul">¿Por cúanto tiempo?</ion-label>
+        <ion-select [(ngModel)]="pTiempo" interface="popover">
+          <ion-option value="OneH">1 Hora</ion-option>
+          <ion-option value="twoH">2 Horas</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <div text-center>
+      <button class="sizeD" ion-button color="morado" (click)="buscAulas()" outline icon-end>
+        Presiona para buscar aulas
+        <ion-icon name="search"></ion-icon>
+      </button>  
+    </div>
+    
+  </ion-content>
