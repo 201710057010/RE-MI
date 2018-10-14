@@ -13,16 +13,10 @@
     </button>
   </a>
   <div class = "reservasContainer">
-    <div class="flexsearch">
-      <div class="flexsearch--wrapper">
-        <form class="flexsearch--form" action ="#" method="post">
-          <div class ="flexsearch--input-wrapper"> 
-            <input class="flexsearch--input" type="search" placeholder="search">
-            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
-          </div>
-        </form>
-      </div>
-    </div>
+      <input #input type="input" placeholder="buscar" class="flexsearch--input" required autofocus>
+      <button class ="flexsearch--submit" (click)="buscar(input.value)">
+          &#10140;
+      </button>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -31,6 +25,13 @@
       <th scope="col">Codigo</th>
       <th scope="col">Horario</th>
       <th scope="col">Cancelar</th>
+    </tr>
+    <tr *ngFor="let reserva of buscadas">
+      <th scope="col">{{reserva.aula}}</th>
+      <th scope="col">{{reserva.nombre}}</th>
+      <th scope="col">{{reserva.codigo}}</th>
+      <th scope="col">{{reserva.horario}}</th>
+      <th scope="col"><button (click)= "eliminarReserva(reserva.aula)"> cancelar </button></th>
     </tr>
   </thead>
   <tbody>
