@@ -5,9 +5,9 @@
       <input #inputid type="id" id ="input_nombre" class="form-control" placeholder="Nombre Completo" required autofocus>
       <input #inputEmail type="email" id ="input_Email" class="form-control" placeholder="Correo" required>
       <input #inputPassword type="password" id="input_Password" class="form-control" placeholder="Contraseña" required >     
-      <input #inputPassword type="password" id="input_Password_confirm" class="form-control" placeholder="Contraseña" required >
+      <input #inputPassword2 type="password" id="input_Password_confirm" class="form-control" placeholder="Confirmar contraseña" required >
       <a>
-        <button class="btn btn-lg btn-primary btn-block" id= "regist" type="submit" >
+        <button class="btn btn-lg btn-primary btn-block" id= "regist" type="submit" (click)= "registrar(inputid.value, inputEmail.value, inputPassword.value, inputPassword2.value)" >
           Registrar
         </button>
       </a>

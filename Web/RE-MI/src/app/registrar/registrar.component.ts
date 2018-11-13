@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { usuario } from '../app.component';
+import { UserListService } from '../user-list.service'
 
 @Component({
   selector: 'app-registrar',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public user:UserListService
+  ) { }
+
+  
+  nuevo;
 
   ngOnInit() {
   }
 
+
+  registrar(id,email,password,password2){
+    if(password == password2){  
+      this.nuevo = new usuario(id,email,password);
+      this.user.agregar(this.nuevo);
+    }
+  }
+  
 }

@@ -28,10 +28,14 @@ export class reserva{
   public nombre : string;
   public codigo : string;
   public horario : string;
-  constructor(aula,nombre,codigo,horario){
+  public tipo : string;
+  public fecha: string;
+  constructor(aula,nombre,codigo,horario,tipo,fecha){
    this.aula = aula;
    this.nombre= nombre;
    this.codigo = codigo;
    this.horario = horario;
+   this.tipo = tipo;
+   this.fecha = fecha;
   }
 }

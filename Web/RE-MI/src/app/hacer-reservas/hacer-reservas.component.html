@@ -36,9 +36,14 @@
   <h2>
     Horario
   </h2>
-  <select size = {{b}} id = "horarios" class="input>
-      <option *ngFor="let horario of horarios" value= "{{horario}}">{{horario}}</option>
+  <select size = {{b}} id = "horarios" class="input">
+      <option *ngFor= "let horario of horarios" value= "{{horario}}">{{horario}}</option>
   </select>
+</div>
+
+<div>
+   <input type= "radio" id = "1 hora" name = "tipoHorario" class="button" (change)="hacerhorarios1()"> 1 hora
+   <input type= "radio" id = "2 horas" name= "tipoHorario" (change)="hacerhorarios2()" class= "button"> 2 horas 
 </div>
 
 <div>
