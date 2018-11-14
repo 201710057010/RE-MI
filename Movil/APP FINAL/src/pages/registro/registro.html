@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>REGISTRO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div text-center>
+      <ion-img width="100" height="80" src="assets/imgs/logoV3.png"></ion-img>
+    </div>
+    
+    <ion-item padding>
+      <ion-input [(ngModel)]="userName" type="text" placeholder="Nombre Completo"></ion-input>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-label>¿Qué instrumento tocas?</ion-label>
+      <ion-select [(ngModel)]="userInstr">
+        <ion-option value="guitar">Guitarra</ion-option>
+        <ion-option value="vio">Violín</ion-option>
+        <ion-option value="pian">Piano</ion-option>
+        <ion-option value="tromp">Trompeta</ion-option>
+        <ion-option value="batery">Batería</ion-option>
+        <ion-option value="flaut">Flauta</ion-option>
+        <ion-option value="voz">Voz</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-input [(ngModel)]="userCode" type="text" placeholder="Código de Estudiante"></ion-input>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-input [(ngModel)]="userEmail" type="text" placeholder="Correo Institucional"></ion-input>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-input [(ngModel)]="userPass1" type="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+
+    <ion-item padding>
+      <ion-input [(ngModel)]="userPass2" type="password" placeholder="Repite Contraseña"></ion-input>
+    </ion-item>
+
+    <div text-center padding>
+      <button ion-button color="azul" (click)="goMisReservas()" class="butEntrar" round>Registrarse</button>  
+    </div>
+</ion-content>

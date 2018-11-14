@@ -19,6 +19,9 @@ import { ListasOnlineProvider } from '../providers/listas-online/listas-online';
 import { ObjReservaProvider } from '../providers/obj-reserva/obj-reserva';
 import { SalonProvider } from '../providers/salon/salon';
 import { UserProvider } from '../providers/user/user';
+import { RegistroPage } from '../pages/registro/registro';
+import { ListUsersProvider } from '../providers/list-users/list-users';
+import { UserLoggedProvider } from '../providers/user-logged/user-logged';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { UserProvider } from '../providers/user/user';
     ReservManPage,
     AjustesPage,
     ChatBotPage,
-    AulasDisponiblesPage
+    AulasDisponiblesPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { UserProvider } from '../providers/user/user';
     ReservManPage,
     AjustesPage,
     ChatBotPage,
-    AulasDisponiblesPage
+    AulasDisponiblesPage,
+    RegistroPage
   ],
   providers: [
     StatusBar,
@@ -57,7 +62,9 @@ import { UserProvider } from '../providers/user/user';
     ListasOnlineProvider,
     ObjReservaProvider,
     SalonProvider,
-    UserProvider
+    UserProvider,
+    ListUsersProvider,
+    UserLoggedProvider
   ]
 })
 export class AppModule {}

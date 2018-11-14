@@ -6,18 +6,22 @@
       </div>
 
       <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Usuario</ion-label>
+        <ion-input [(ngModel)]="usrN" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input [(ngModel)]="passW" type="password"></ion-input>
       </ion-item>
     </ion-list>
 
     <div text-center padding>
-        <button ion-button color="morado" (click)="goPagina2()" class="butEntrar" round>ENTRAR</button>  
+        <button ion-button color="morado" (click)="goReservas()" class="butEntrar" round>ENTRAR</button>  
+    </div>
+
+    <div text-center class="registro">
+      <u (click)="goRegistro()">¿Nuevo en la App? ¡Registrate!</u>
     </div>
 </ion-content>
 

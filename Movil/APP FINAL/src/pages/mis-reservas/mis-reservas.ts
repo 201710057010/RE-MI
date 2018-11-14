@@ -23,7 +23,7 @@ export class MisReservasPage {
     public modalCtrl: ModalController, 
     public listAulas: ListasOnlineProvider) 
     {
-      this.myReservas = listAulas.misReservas;
+      this.myReservas = listAulas.getMyReservas();
     }
 
     

@@ -9,11 +9,13 @@ import { AulasDisponiblesPage } from '../aulas-disponibles/aulas-disponibles';
   templateUrl: 'reserv-man.html',
 })
 export class ReservManPage {
-  pPiano;
+  pTipo;
+  pInstr;
   pDia;
   pTiempo;
 
-  buscar: boolean = true;
+  horaActual;
+  diaActual;
 
   constructor(
     public navCtrl: NavController,
@@ -22,13 +24,15 @@ export class ReservManPage {
     public viewCtrl: ViewController, 
     public modalCtrl: ModalController
   ) {
-
+    var calendar = new Date();
+    this.horaActual = calendar.getHours();
+    this.diaActual = calendar.getDate();
   }
 
   buscAulas(){
-    if(this.buscar == true){//this.pPiano!=null)&&(this.pDia!=null)&&(this.pTiempo!=null)){
-      let modal = this.modalCtrl.create(AulasDisponiblesPage);
-      modal.present();
+    if((this.pTipo!=null)&&(this.pInstr!=null)&&(this.pTiempo!=null)&&(this.pDia!=null)){
+
+      this.navCtrl.push(AulasDisponiblesPage,{tipo:this.pTipo,instr:this.pInstr,dia:this.pDia,time:this.pTiempo});
       
     } else {
         const alert = this.alertCtrl.create({
@@ -38,6 +42,14 @@ export class ReservManPage {
       });
       alert.present();
     }
+  }
+
+  /**
+   * Este metodo se encarga de mostrar en el html los horarios según si el usuario eligió hoy o mañana y la hora
+   * actual que séa en ese momento
+   */
+  verHora(){
+    
   }
 
  cerrarRervMan() {

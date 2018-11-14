@@ -6,18 +6,18 @@ export class UserProvider {
   codigo;
   correo;
   especializacion;
-  contraseña = "admin";
+  contraseña;
   horasHM = 2;
   horasHT = 2;
   horasMM = 2;
   horasMT = 2;
 
-  constructor(/*name:string,codigo:string,email:string,espec:string,pass:string*/) {
-    /*this.nombre = name;
+  constructor(name:string,codigo:string,email:string,espec:string,pass:string) {
+    this.nombre = name;
     this.codigo = codigo;
     this.correo = email;
     this.especializacion = espec;
-    this.contraseña = pass;*/
+    this.contraseña = pass;
   }
 
   cambPassword(newPass:string){
@@ -28,8 +28,20 @@ export class UserProvider {
     return this.contraseña;
   }
 
+  getName(){
+    return this.nombre;
+  }
+
+  getEsp(){
+    return this.especializacion;
+  }
+
   getCode(){
     return this.codigo;
+  }
+
+  getEmail(){
+    return this.correo;
   }
 
 }

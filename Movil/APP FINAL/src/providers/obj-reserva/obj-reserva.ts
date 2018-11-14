@@ -20,17 +20,4 @@ export class ObjReservaProvider {
     this.salon = salon;
     this.createdAt = createdAt;
   }
-  
-  /*Codigo viejo a continuación:
-  paraDia;
-  hInicial;
-  hFinal;
-  aula;
-  
-  constructor(dia:string, inicial:string, final:string, aula:string){
-    this.paraDia = dia;
-    this.hInicial = inicial;
-    this.hFinal = final;
-    this.aula = aula;
-  }*/
 }

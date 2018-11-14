@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { UserProvider } from '../../providers/user/user';
 import { MisReservasPage } from '../mis-reservas/mis-reservas';
+import { ListUsersProvider } from '../../providers/list-users/list-users';
+import { UserLoggedProvider } from '../../providers/user-logged/user-logged';
 
 @IonicPage()
 @Component({
@@ -19,7 +20,8 @@ export class AjustesPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public alerCtrl: AlertController,
-    public user: UserProvider) {
+    public usersList: ListUsersProvider,
+    public user: UserLoggedProvider) {
   }
 
   cambPass() {
